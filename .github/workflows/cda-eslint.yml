@@ -2,9 +2,11 @@ name: ESLint Code Analysis
 
 on: [push, pull_request]
 
+
 permissions:
-  contents: read            
-  security-events: write  
+  contents: read
+  actions: read  # Added for access to workflow-related information
+  security-events: write  # Required for CodeQL to upload SARIF results
 
 jobs:
   eslint:
@@ -28,7 +30,7 @@ jobs:
 
       - name: Install ESLint SARIF Formatter
         run: npm install @microsoft/eslint-formatter-sarif --save-dev
-        
+
       - name: Fix ESLint binary permissions
         run: chmod +x ./node_modules/.bin/eslint
 
