@@ -31,7 +31,7 @@ jobs:
       - name: Install ESLint SARIF Formatter
         run: npm install @microsoft/eslint-formatter-sarif --save-dev
 
-      - name: Fix ESLint binary permissions
+      - name: Fix ESLint binary permission
         run: chmod +x ./node_modules/.bin/eslint
 
       - name: Run ESLint with SARIF output
