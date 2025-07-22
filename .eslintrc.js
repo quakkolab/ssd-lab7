@@ -8,7 +8,8 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:security/recommended',
-    'plugin:security-node/recommended'
+    'plugin:security-node/recommended',
+    'plugin:no-unsanitized/recommended'
     
   ],
   parser: '@typescript-eslint/parser',
@@ -24,6 +25,7 @@ module.exports = {
     '@typescript-eslint',
     'security',
     'security-node',
+    'no-unsanitized'
   ],
   rules: {
     // Add security rules you need
