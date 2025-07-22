@@ -5,7 +5,7 @@ on: [push, pull_request]
 
 permissions:
   contents: read
-  actions: read  # Added for access to workflow-related information
+  actions: read  # Added for access to workflow-related informationv
   security-events: write  # Required for CodeQL to upload SARIF results
 
 jobs:
